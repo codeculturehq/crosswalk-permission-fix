@@ -4,7 +4,7 @@ package com.codeculture.xwalkpermissionfix;
 import org.apache.cordova.CordovaPlugin;
 
 public class Permfix extends CordovaPlugin {
-    public AudioHandler() {
+    public Permfix() {
         //DO Nothing
     }
 }
