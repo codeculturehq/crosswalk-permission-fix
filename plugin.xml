@@ -30,6 +30,8 @@ id="com.codeculture.xwalkpermissionfix"
             <uses-permission android:name="android.permission.RECORD_AUDIO"/>
             <uses-permission android:name="android.permission.WAKE_LOCK"/>
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+
         </config-file>
 
         <source-file src="src/android/Permfix.java" target-dir="src/com/codeculture/xwalkpermissionfix" />
