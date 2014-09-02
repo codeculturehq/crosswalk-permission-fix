@@ -9,8 +9,18 @@ id="com.codeculture.xwalkpermissionfix"
     <license>Apache 2.0</license>
     <keywords>cordova,crosswalk,permissions</keywords>
 
+    <js-module src="www/Permfix.js" name="Media">
+        <clobbers target="window.permfix" />
+    </js-module>
+
     <!-- android -->
     <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Permfix" >
+                <param name="android-package" value="com.codeculture.xwalkpermissionfix.Permfix"/>
+            </feature>
+        </config-file>
+
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
@@ -21,6 +31,8 @@ id="com.codeculture.xwalkpermissionfix"
             <uses-permission android:name="android.permission.WAKE_LOCK"/>
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
         </config-file>
+
+        <source-file src="src/android/Permfix.java" target-dir="src/com/codeculture/xwalkpermissionfix" />
     </platform>
 
 </plugin>
